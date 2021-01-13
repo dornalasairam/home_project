@@ -15,4 +15,7 @@ public class FluentDriver {
     public FluentElement element(final By by) {
         return new FluentElement(by, driver);
     }
+
+    public void quit() {
+    }
 }
