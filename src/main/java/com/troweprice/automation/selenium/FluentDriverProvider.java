@@ -1,6 +1,6 @@
 package com.troweprice.automation.selenium;
 
-import groovy.beans.PropertyReader;
+import com.troweprice.automation.utilities.PropertyReader;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +21,7 @@ public class FluentDriverProvider {
 
     public FluentDriver get() {
         if (fluentDriver == null) {
-            String browser = "chrome";
+            String browser = PropertyReader.getPropertyValue("browser");
             WebDriver driver = null;
             String downloadFilepath = null;
             try {
