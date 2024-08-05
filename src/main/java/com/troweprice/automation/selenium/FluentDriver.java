@@ -15,4 +15,11 @@ public class FluentDriver {
     public FluentElement element(final By by) {
         return new FluentElement(by, driver);
     }
+
+    public void get(String url) {
+        driver.navigate().to(url);
+    }
+
+    public void quit() {
+    }
 }
